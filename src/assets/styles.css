@@ -1,3 +1,4 @@
-#request-box,#demo {
-    display: inline-block
+#request-box,
+#demo {
+  display: inline-block;
 }
