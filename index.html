@@ -4,10 +4,23 @@
   <body>
     <h1 id="title-name"></h1>
     <h2>Introduction</h2>
-    <form>
+    <!-- <form>
       <input type="text" id="input-name" name="input-name"><br>
       <input type="submit" id="submit">
-    </form>
+    </form> -->
+    <div>
+      <form>
+        <select name="request-type" id="request-type">
+          <option value="get">GET</option>
+          <option value="post">POST</option>
+          <option value="patch">PATCH</option>
+          <option value="put">PUT</option>
+          <option value="delete">DELETE</option>
+        </select>
+        <input type="submit" id="submit-type">
+      </form>
+    </div>
+
     
     <p id="demo"></p>
     <script src="assets/testing.js"></script>
