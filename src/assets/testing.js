@@ -12,11 +12,14 @@ function setRequestBar(requestType) {
     case "get":
       console.log(requestType);
       setGetForm();
-      document.getElementById("test").innerHTML = document.getElementById("object-choice").value;
-      document.getElementById("object-choice").addEventListener("change", function () {
-        setObjectView(document.getElementById("object-choice").value);
-      });
-      
+      document.getElementById("test").innerHTML =
+        document.getElementById("object-choice").value;
+      document
+        .getElementById("object-choice")
+        .addEventListener("change", function () {
+          setObjectView(document.getElementById("object-choice").value);
+        });
+
       break;
     case "post":
       console.log(requestType);
@@ -43,30 +46,37 @@ function setGetForm() {
 
   optionDefault = document.createElement("option");
   optionDefault.value = "";
-  optionDefault.hidden = true;optionDefault.disabled=true; optionDefault.selected=true;
+  optionDefault.hidden = true;
+  optionDefault.disabled = true;
+  optionDefault.selected = true;
   select.appendChild(optionDefault);
 
   option1 = document.createElement("option");
-  option1.value = 'resume';
+  option1.value = "resume";
   option1.innerHTML = "Resume";
   select.appendChild(option1);
 
   option2 = document.createElement("option");
-  option2.value = 'projects';
+  option2.value = "projects";
   option2.innerHTML = "Projects";
   select.appendChild(option2);
 
   document.getElementById("demo").after(form);
 }
 
-function setObjectView(object){
-  document.getElementById("render-object").innerHTML="";
+function setObjectView(object) {
+  document.getElementById("render-object").innerHTML = "";
   switch (object) {
     case "resume":
       resumeObject = document.createElement("embed");
       resumeObject.src = "assets/AliLadhaResume.pdf";
       resumeObject.type = "application/pdf";
       document.getElementById("render-object").appendChild(resumeObject);
+      break;
     case "projects":
+      projectObject = document.createElement("p");
+      projectObject.innerHTML = "test";
+      document.getElementById("render-object").appendChild(projectObject);
+      break;
   }
-} 
+}
