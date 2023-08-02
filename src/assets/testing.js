@@ -60,6 +60,7 @@ function setGetForm() {
 }
 
 function setObjectView(object){
+  document.getElementById("render-object").innerHTML="";
   switch (object) {
     case "resume":
       resumeObject = document.createElement("embed");
