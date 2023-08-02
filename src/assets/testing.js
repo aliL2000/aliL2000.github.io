@@ -56,7 +56,7 @@ function setGetForm() {
   option2.innerHTML = "Projects";
   select.appendChild(option2);
 
-  document.getElementById("demo").appendChild(form);
+  document.getElementById("demo").after(form);
 }
 
 function setObjectView(object){
