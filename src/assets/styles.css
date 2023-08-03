@@ -1,6 +1,7 @@
 #request-box,
 #demo,
-#request-object, #send-object {
+#request-object,
+#send-object {
   display: inline-block;
 }
 

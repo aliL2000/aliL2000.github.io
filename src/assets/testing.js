@@ -23,10 +23,10 @@ function setRequestBar(requestType) {
       console.log(requestType);
       setPostForm();
       document
-      .getElementById("object-choice")
-      .addEventListener("change", function () {
-        setPostView(document.getElementById("object-choice").value);
-      });
+        .getElementById("object-choice")
+        .addEventListener("change", function () {
+          setPostView(document.getElementById("object-choice").value);
+        });
       break;
     case "patch":
       console.log(requestType);
