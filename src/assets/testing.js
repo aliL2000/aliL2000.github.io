@@ -1,6 +1,6 @@
-let isResumeDeleted=false;
-let isStylingDeleted=false;
-let isEverythingDeleted=false;
+let isResumeDeleted = false;
+let isStylingDeleted = false;
+let isEverythingDeleted = false;
 
 document.getElementById("request-type").addEventListener("change", function () {
   event.preventDefault();
@@ -43,12 +43,12 @@ function setRequestBar(requestType) {
       //Show user's what they can delete and a description of what they're deleting
       setDeleteForm();
       document
-      .getElementById("object-choice")
-      .addEventListener("change", function () {
-        setDeleteDescription(document.getElementById("object-choice").value);
-      });
+        .getElementById("object-choice")
+        .addEventListener("change", function () {
+          setDeleteDescription(document.getElementById("object-choice").value);
+        });
       //Render page with the elements they wanted removed
-      
+
       break;
   }
 }
@@ -181,6 +181,4 @@ function setDeleteDescription(object) {
   }
 }
 
-function setDeletedView(object) {
-
-}
+function setDeletedView(object) {}
