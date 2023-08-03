@@ -1,5 +1,3 @@
-document.getElementById("title-name").innerHTML = "Hi, I'm Ali Ladha";
-
 document.getElementById("request-type").addEventListener("change", function () {
   event.preventDefault();
   document.getElementById("demo").innerHTML =
@@ -23,6 +21,12 @@ function setRequestBar(requestType) {
       break;
     case "post":
       console.log(requestType);
+      setPostForm();
+      document
+      .getElementById("object-choice")
+      .addEventListener("change", function () {
+        setPostView(document.getElementById("object-choice").value);
+      });
       break;
     case "patch":
       console.log(requestType);
@@ -64,6 +68,29 @@ function setGetForm() {
   document.getElementById("demo").after(form);
 }
 
+function setPostForm() {
+  document.getElementById("demo").innerHTML = "...personal-site/resource?type=";
+  form = document.createElement("form");
+  form.id = "send-object";
+  select = document.createElement("select");
+  select.id = "object-choice";
+  form.appendChild(select);
+
+  optionDefault = document.createElement("option");
+  optionDefault.value = "";
+  optionDefault.hidden = true;
+  optionDefault.disabled = true;
+  optionDefault.selected = true;
+  select.appendChild(optionDefault);
+
+  option1 = document.createElement("option");
+  option1.value = "contact";
+  option1.innerHTML = "Contact-Me";
+  select.appendChild(option1);
+
+  document.getElementById("demo").after(form);
+}
+
 function setObjectView(object) {
   document.getElementById("render-object").innerHTML = "";
   switch (object) {
@@ -77,6 +104,18 @@ function setObjectView(object) {
       projectObject = document.createElement("p");
       projectObject.innerHTML = "test";
       document.getElementById("render-object").appendChild(projectObject);
+      break;
+  }
+}
+
+function setPostView(object) {
+  document.getElementById("render-object").innerHTML = "";
+  switch (object) {
+    case "contact":
+      emailObject = document.createElement("a");
+      emailObject.href = "mailto:aliladha2000@gmail.com";
+      emailObject.innerHTML = "Email";
+      document.getElementById("render-object").appendChild(emailObject);
       break;
   }
 }
