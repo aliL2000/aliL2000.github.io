@@ -1,3 +1,7 @@
+let isResumeDeleted=false;
+let isStylingDeleted=false;
+let isEverythingDeleted=false;
+
 document.getElementById("request-type").addEventListener("change", function () {
   event.preventDefault();
   document.getElementById("demo").innerHTML =
@@ -36,6 +40,15 @@ function setRequestBar(requestType) {
       break;
     case "delete":
       console.log(requestType);
+      //Show user's what they can delete and a description of what they're deleting
+      setDeleteForm();
+      document
+      .getElementById("object-choice")
+      .addEventListener("change", function () {
+        setDeleteDescription(document.getElementById("object-choice").value);
+      });
+      //Render page with the elements they wanted removed
+      
       break;
   }
 }
@@ -91,6 +104,39 @@ function setPostForm() {
   document.getElementById("demo").after(form);
 }
 
+function setDeleteForm() {
+  document.getElementById("demo").innerHTML = "...personal-site/resource?type=";
+  form = document.createElement("form");
+  form.id = "delete-object";
+  select = document.createElement("select");
+  select.id = "object-choice";
+  form.appendChild(select);
+
+  optionDefault = document.createElement("option");
+  optionDefault.value = "";
+  optionDefault.hidden = true;
+  optionDefault.disabled = true;
+  optionDefault.selected = true;
+  select.appendChild(optionDefault);
+
+  option1 = document.createElement("option");
+  option1.value = "resume";
+  option1.innerHTML = "Resume";
+  select.appendChild(option1);
+
+  option2 = document.createElement("option");
+  option2.value = "styling";
+  option2.innerHTML = "Styling";
+  select.appendChild(option2);
+
+  option3 = document.createElement("option");
+  option3.value = "everything";
+  option3.innerHTML = "Everything";
+  select.appendChild(option3);
+
+  document.getElementById("demo").after(form);
+}
+
 function setObjectView(object) {
   document.getElementById("render-object").innerHTML = "";
   switch (object) {
@@ -118,4 +164,23 @@ function setPostView(object) {
       document.getElementById("render-object").appendChild(emailObject);
       break;
   }
+}
+
+function setDeleteDescription(object) {
+  document.getElementById("render-object").innerHTML = "";
+  switch (object) {
+    case "resume":
+      document.getElementById("render-object").innerHTML = "resumedeleting";
+      break;
+    case "styling":
+      document.getElementById("render-object").innerHTML = "stylgingdeleting";
+      break;
+    case "everything":
+      document.getElementById("render-object").innerHTML = "everythingdeleting";
+      break;
+  }
+}
+
+function setDeletedView(object) {
+
 }

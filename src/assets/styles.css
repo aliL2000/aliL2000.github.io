@@ -1,7 +1,8 @@
 #request-box,
 #demo,
 #request-object,
-#send-object {
+#send-object,
+#delete-object {
   display: inline-block;
 }
 
