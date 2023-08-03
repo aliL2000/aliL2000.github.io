@@ -21,7 +21,6 @@ function setRequestBar(requestType) {
         .addEventListener("change", function () {
           setObjectView(document.getElementById("object-choice").value);
         });
-
       break;
     case "post":
       console.log(requestType);
@@ -46,14 +45,25 @@ function setRequestBar(requestType) {
         .getElementById("object-choice")
         .addEventListener("change", function () {
           setDeleteDescription(document.getElementById("object-choice").value);
+          setDeletedView(document.getElementById("object-choice").value);
         });
       //Render page with the elements they wanted removed
-
+      //setDeletedView(document.getElementById("object-choice").value);
       break;
   }
 }
 
+function resetForm(element) {
+  let current = element.nextElementSibling;
+  while (current !== null) {
+    const next = current.nextElementSibling;
+    current.remove();
+    current = next;
+  }
+}
+
 function setGetForm() {
+  resetForm(document.getElementById("demo"));
   document.getElementById("demo").innerHTML = "...personal-site/resource?type=";
   form = document.createElement("form");
   form.id = "request-object";
@@ -82,6 +92,7 @@ function setGetForm() {
 }
 
 function setPostForm() {
+  resetForm(document.getElementById("demo"));
   document.getElementById("demo").innerHTML = "...personal-site/resource?type=";
   form = document.createElement("form");
   form.id = "send-object";
@@ -105,6 +116,7 @@ function setPostForm() {
 }
 
 function setDeleteForm() {
+  resetForm(document.getElementById("demo"));
   document.getElementById("demo").innerHTML = "...personal-site/resource?type=";
   form = document.createElement("form");
   form.id = "delete-object";
@@ -141,10 +153,16 @@ function setObjectView(object) {
   document.getElementById("render-object").innerHTML = "";
   switch (object) {
     case "resume":
-      resumeObject = document.createElement("embed");
-      resumeObject.src = "assets/AliLadhaResume.pdf";
-      resumeObject.type = "application/pdf";
-      document.getElementById("render-object").appendChild(resumeObject);
+      if (!isResumeDeleted) {
+        resumeObject = document.createElement("embed");
+        resumeObject.src = "assets/AliLadhaResume.pdf";
+        resumeObject.type = "application/pdf";
+        document.getElementById("render-object").appendChild(resumeObject);
+      } else {
+        document.getElementById("render-object").innerHTML =
+          "You tried getting my resume when you deleted it, didn't you?";
+      }
+
       break;
     case "projects":
       projectObject = document.createElement("p");
@@ -181,4 +199,22 @@ function setDeleteDescription(object) {
   }
 }
 
-function setDeletedView(object) {}
+function setDeletedView(object) {
+  switch (object) {
+    case "resume":
+      isResumeDeleted = true;
+      document.getElementById("render-object").innerHTML =
+        "Welp, you deleted the resume, damn!";
+      break;
+    case "styling":
+      isStylingDeleted = true;
+      document.styleSheets[0].disabled = !document.styleSheets[0].disabled;
+      document.getElementById("render-object").innerHTML =
+        "Welp, you deleted all the styling on this website!";
+      break;
+    case "everything":
+      document.getElementsByTagName("html")[0].innerHTML =
+        "Welp, you deleted everything on this website! Try reloading to reset";
+      break;
+  }
+}
