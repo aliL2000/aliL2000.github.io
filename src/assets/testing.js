@@ -24,6 +24,7 @@ function setRequestBar(requestType) {
       break;
     case "post":
       console.log(requestType);
+      //Show users the updated url and what they can send
       setPostForm();
       document
         .getElementById("object-choice")
@@ -33,9 +34,12 @@ function setRequestBar(requestType) {
       break;
     case "patch":
       console.log(requestType);
+      setPatchForm();
       break;
     case "put":
       console.log(requestType);
+      setPutForm();
+      
       break;
     case "delete":
       console.log(requestType);
@@ -113,6 +117,14 @@ function setPostForm() {
   select.appendChild(option1);
 
   document.getElementById("demo").after(form);
+}
+
+function setPatchForm(){
+
+}
+
+function setPutForm(){
+
 }
 
 function setDeleteForm() {
