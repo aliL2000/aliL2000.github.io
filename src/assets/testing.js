@@ -218,3 +218,8 @@ function setDeletedView(object) {
       break;
   }
 }
+
+//The file is a lot of things, maybe split up the file to perform different things?
+// JSX is better? (do research on that) 
+// Why is the raw code not put into a helper function that just repeats what is needed?
+// JSDoc, for documentation purposes
