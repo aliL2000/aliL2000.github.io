@@ -33,13 +33,14 @@ function setRequestBar(requestType) {
         });
       break;
     case "patch":
+      //TODO: Brainstorm and implement this route
       console.log(requestType);
       setPatchForm();
       break;
     case "put":
+      //TODO: Brainstorm and implement this route
       console.log(requestType);
       setPutForm();
-      
       break;
     case "delete":
       console.log(requestType);
@@ -120,11 +121,9 @@ function setPostForm() {
 }
 
 function setPatchForm(){
-
 }
 
 function setPutForm(){
-
 }
 
 function setDeleteForm() {
