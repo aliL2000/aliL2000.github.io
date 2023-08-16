@@ -1,11 +1,18 @@
 body {
+  background-color: rgb(255, 250, 220);
   font-family: "Montserrat", Helvetica, sans-serif;
   text-align: center;
+  font-size: 1vw;
+}
+
+select {
+  font-family: "Montserrat", Helvetica, sans-serif;
 }
 
 #title-name {
   font-family: "Raleway";
   font-weight: bolder;
+  font-size: 2vw;
 }
 
 #request-box,
@@ -18,15 +25,17 @@ body {
 
 #render-object {
   margin: auto;
-  width: 60%;
-  border: 3px solid #ff0000;
+  width: 85%;
+  border: 3px solid rgb(168, 159, 109);;
+  background: rgb(255, 243, 172);;
+  border-radius: 10px;
   padding: 10px;
   text-align: center;
 }
 
 embed {
   height: 250px;
-  width: 600px;
+  width: 80%;
 }
 
 footer {
