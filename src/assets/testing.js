@@ -49,6 +49,7 @@ function setRequestBar(requestType) {
       document
         .getElementById("object-choice")
         .addEventListener("change", function () {
+          //Render page with the elements they wanted removed
           setDeleteDescription(document.getElementById("object-choice").value);
           setDeletedView(document.getElementById("object-choice").value);
         });
