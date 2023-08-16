@@ -10,9 +10,9 @@ document.getElementById("request-type").addEventListener("change", function () {
 });
 
 function setRequestBar(requestType) {
+  resetForm(document.getElementById("demo"));
   switch (requestType) {
     case "get":
-      console.log(requestType);
       setGetForm();
       document.getElementById("test").innerHTML =
         document.getElementById("object-choice").value;
@@ -23,7 +23,6 @@ function setRequestBar(requestType) {
         });
       break;
     case "post":
-      console.log(requestType);
       //Show users the updated url and what they can send
       setPostForm();
       document
@@ -34,16 +33,13 @@ function setRequestBar(requestType) {
       break;
     case "patch":
       //TODO: Brainstorm and implement this route
-      console.log(requestType);
       setPatchForm();
       break;
     case "put":
       //TODO: Brainstorm and implement this route
-      console.log(requestType);
       setPutForm();
       break;
     case "delete":
-      console.log(requestType);
       //Show user's what they can delete and a description of what they're deleting
       setDeleteForm();
       document
@@ -69,7 +65,7 @@ function resetForm(element) {
 }
 
 function setGetForm() {
-  resetForm(document.getElementById("demo"));
+  // resetForm(document.getElementById("demo"));
   document.getElementById("demo").innerHTML = "...personal-site/resource?type=";
   form = document.createElement("form");
   form.id = "request-object";
@@ -98,7 +94,7 @@ function setGetForm() {
 }
 
 function setPostForm() {
-  resetForm(document.getElementById("demo"));
+  // resetForm(document.getElementById("demo"));
   document.getElementById("demo").innerHTML = "...personal-site/resource?type=";
   form = document.createElement("form");
   form.id = "send-object";
@@ -128,7 +124,7 @@ function setPutForm(){
 }
 
 function setDeleteForm() {
-  resetForm(document.getElementById("demo"));
+  // resetForm(document.getElementById("demo"));
   document.getElementById("demo").innerHTML = "...personal-site/resource?type=";
   form = document.createElement("form");
   form.id = "delete-object";
