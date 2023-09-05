@@ -3,6 +3,7 @@ body {
   font-family: "Montserrat", Helvetica, sans-serif;
   text-align: center;
   font-size: 1vw;
+  margin: 0;
 }
 
 select {
@@ -34,17 +35,29 @@ select {
 }
 
 embed {
-  height: 250px;
+  height: 80%;
   width: 80%;
 }
 
 footer {
   background-color: black;
   color: white;
+  width:100%;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  margin-top: 500px;
+
+  /* color: white;
   text-align: center;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100px;
+  height: 100px; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    color: white; */
 }
