@@ -1,4 +1,4 @@
-import { setGetForm,setObjectView } from './get/get.js';
+import { setGetForm, setObjectView } from "./get/get.js";
 
 let isResumeDeleted = false;
 let isStylingDeleted = false;
@@ -21,7 +21,10 @@ function setRequestBar(requestType) {
       document
         .getElementById("object-choice")
         .addEventListener("change", function () {
-          setObjectView(document.getElementById("object-choice").value,isResumeDeleted);
+          setObjectView(
+            document.getElementById("object-choice").value,
+            isResumeDeleted
+          );
         });
       break;
     case "post":
@@ -66,35 +69,6 @@ function resetForm(element) {
   }
 }
 
-// function setGetForm() {
-//   // resetForm(document.getElementById("demo"));
-//   document.getElementById("demo").innerHTML = "...personal-site/resource?type=";
-//   form = document.createElement("form");
-//   form.id = "request-object";
-//   select = document.createElement("select");
-//   select.id = "object-choice";
-//   form.appendChild(select);
-
-//   optionDefault = document.createElement("option");
-//   optionDefault.value = "";
-//   optionDefault.hidden = true;
-//   optionDefault.disabled = true;
-//   optionDefault.selected = true;
-//   select.appendChild(optionDefault);
-
-//   option1 = document.createElement("option");
-//   option1.value = "resume";
-//   option1.innerHTML = "Resume";
-//   select.appendChild(option1);
-
-//   option2 = document.createElement("option");
-//   option2.value = "projects";
-//   option2.innerHTML = "Projects";
-//   select.appendChild(option2);
-
-//   document.getElementById("demo").after(form);
-// }
-
 function setPostForm() {
   // resetForm(document.getElementById("demo"));
   document.getElementById("demo").innerHTML = "...personal-site/resource?type=";
@@ -119,11 +93,9 @@ function setPostForm() {
   document.getElementById("demo").after(form);
 }
 
-function setPatchForm(){
-}
+function setPatchForm() {}
 
-function setPutForm(){
-}
+function setPutForm() {}
 
 function setDeleteForm() {
   // resetForm(document.getElementById("demo"));
@@ -158,29 +130,6 @@ function setDeleteForm() {
 
   document.getElementById("demo").after(form);
 }
-
-// function setObjectView(object) {
-//   document.getElementById("render-object").innerHTML = "";
-//   switch (object) {
-//     case "resume":
-//       if (!isResumeDeleted) {
-//         resumeObject = document.createElement("embed");
-//         resumeObject.src = "assets/AliLadhaResume.pdf";
-//         resumeObject.type = "application/pdf";
-//         document.getElementById("render-object").appendChild(resumeObject);
-//       } else {
-//         document.getElementById("render-object").innerHTML =
-//           "You tried getting my resume when you deleted it, didn't you?";
-//       }
-
-//       break;
-//     case "projects":
-//       projectObject = document.createElement("p");
-//       projectObject.innerHTML = "test";
-//       document.getElementById("render-object").appendChild(projectObject);
-//       break;
-//   }
-// }
 
 function setPostView(object) {
   document.getElementById("render-object").innerHTML = "";
@@ -230,6 +179,6 @@ function setDeletedView(object) {
 }
 
 //The file is a lot of things, maybe split up the file to perform different things?
-// JSX is better? (do research on that) 
+// JSX is better? (do research on that)
 // Why is the raw code not put into a helper function that just repeats what is needed?
 // JSDoc, for documentation purposes
