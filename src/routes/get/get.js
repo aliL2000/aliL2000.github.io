@@ -42,20 +42,9 @@ function setObjectView(object, isResumeDeleted) {
 
       break;
     case "projects":
-      const achievements = [
-        "Collaborated with 2 Agile Development teams on 2 separate projects, working on over 30+ tickets to meet project deadlines and technical requirements.",
-        "Modified code-base structures to implement fixes and ensure backwards compatibility, increasing efficiency of systems by up to 48%, and writing up to 750+ lines of code.",
-        "Updated 15+ sub-critical QA Tests on existing codebase to ensure expected software behavior in TDD.",
-      ];
+      
       var projectObject = document.createElement("div");
-      const ul = document.createElement("ul");
-
-      achievements.forEach((achievement) => {
-        const li = document.createElement("li");
-        li.textContent = achievement;
-        ul.appendChild(li);
-      });
-      projectObject.appendChild(ul);
+      
       document.getElementById("render-object").appendChild(projectObject);
 
       break;
