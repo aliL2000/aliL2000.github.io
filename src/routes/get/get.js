@@ -1,3 +1,5 @@
+import { createProjects } from "./render_projects.js";
+
 function setGetForm() {
   document.getElementById("demo").innerHTML = "...personal-site/resource?type=";
   var form = document.createElement("form");
@@ -43,7 +45,7 @@ function setObjectView(object, isResumeDeleted) {
       break;
     case "projects":
       
-      var projectObject = document.createElement("div");
+      var projectObject = createProjects();
       
       document.getElementById("render-object").appendChild(projectObject);
 
