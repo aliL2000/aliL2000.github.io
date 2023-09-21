@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(255, 250, 220);
+  background-color: rgb(255, 255, 255);
   font-family: "Montserrat", Helvetica, sans-serif;
   text-align: center;
   font-size: 1vw;
@@ -20,15 +20,21 @@ select {
 #demo,
 #request-object,
 #send-object,
-#delete-object {
+#delete-object,
+#project-container {
+  display: inline-block;
+}
+
+#description-container {
+  width: 20%;
   display: inline-block;
 }
 
 #render-object {
   margin: auto;
   width: 85%;
-  border: 3px solid rgb(168, 159, 109);
-  background: rgb(255, 243, 172);
+  border: 3px solid rgb(166, 166, 166);
+  background: rgb(255, 255, 255);
   border-radius: 10px;
   padding: 10px;
   text-align: center;
