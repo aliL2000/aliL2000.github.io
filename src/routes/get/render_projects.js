@@ -68,3 +68,5 @@ function createProject(name, description, arrayLength, technologies) {
 }
 
 function renderTechStack(arrayLength, technologies) {}
+
+export { createProjects };
