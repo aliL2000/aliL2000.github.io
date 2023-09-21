@@ -26,9 +26,10 @@ select {
 }
 
 #description-container {
-  width: 20%;
+  width: 30%;
   display: inline-block;
 }
+
 
 #render-object {
   margin: auto;
@@ -37,7 +38,6 @@ select {
   background: rgb(255, 255, 255);
   border-radius: 10px;
   padding: 10px;
-  text-align: center;
 }
 
 embed {
@@ -52,4 +52,15 @@ footer {
   justify-content: center;
   position: absolute;
   bottom: 0;
+}
+
+#tech-tag-container {
+  text-align: left;
+}
+
+#tech-tag {
+  background-color: black;
+  color: white;
+  display: inline-block;
+  margin: 1px;
 }
