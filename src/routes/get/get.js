@@ -1,4 +1,5 @@
 import { createProjects } from "./render_projects.js";
+import { isResumeDeleted } from "../main.js";
 
 function setGetForm() {
   document.getElementById("demo").innerHTML = "...personal-site/resource?type=";
@@ -28,7 +29,7 @@ function setGetForm() {
   document.getElementById("demo").after(form);
 }
 
-function setObjectView(object, isResumeDeleted) {
+function setObjectView(object) {
   document.getElementById("render-object").innerHTML = "";
   switch (object) {
     case "resume":

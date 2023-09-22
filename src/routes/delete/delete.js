@@ -1,3 +1,5 @@
+import { isResumeDeleted } from "../main.js";
+
 function setDeleteForm() {
   document.getElementById("demo").innerHTML = "...personal-site/resource?type=";
   var form = document.createElement("form");
@@ -13,10 +15,10 @@ function setDeleteForm() {
   optionDefault.selected = true;
   select.appendChild(optionDefault);
 
-  var option1 = document.createElement("option");
-  option1.value = "resume";
-  option1.innerHTML = "Resume";
-  select.appendChild(option1);
+//   var option1 = document.createElement("option");
+//   option1.value = "resume";
+//   option1.innerHTML = "Resume";
+//   select.appendChild(option1);
 
   var option2 = document.createElement("option");
   option2.value = "styling";
@@ -54,7 +56,7 @@ function setDeletedView(object) {
         "Welp, you deleted the resume, damn!";
       break;
     case "styling":
-      isStylingDeleted = true;
+      var isStylingDeleted = true;
       document.styleSheets[0].disabled = !document.styleSheets[0].disabled;
       document.getElementById("render-object").innerHTML =
         "Welp, you deleted all the styling on this website!";
