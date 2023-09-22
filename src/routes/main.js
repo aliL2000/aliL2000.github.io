@@ -72,7 +72,7 @@ function resetForm(element) {
 function setPostForm() {
   // resetForm(document.getElementById("demo"));
   document.getElementById("demo").innerHTML = "...personal-site/resource?type=";
-  form = document.createElement("form");
+  var form = document.createElement("form");
   form.id = "send-object";
   select = document.createElement("select");
   select.id = "object-choice";
@@ -100,7 +100,7 @@ function setPutForm() {}
 function setDeleteForm() {
   // resetForm(document.getElementById("demo"));
   document.getElementById("demo").innerHTML = "...personal-site/resource?type=";
-  form = document.createElement("form");
+  var form = document.createElement("form");
   form.id = "delete-object";
   select = document.createElement("select");
   select.id = "object-choice";
