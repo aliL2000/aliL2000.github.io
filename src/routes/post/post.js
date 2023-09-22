@@ -1,5 +1,4 @@
 function setPostForm() {
-  // resetForm(document.getElementById("demo"));
   document.getElementById("demo").innerHTML = "...personal-site/resource?type=";
   var form = document.createElement("form");
   form.id = "send-object";
