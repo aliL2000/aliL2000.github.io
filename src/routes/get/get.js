@@ -41,14 +41,10 @@ function setObjectView(object, isResumeDeleted) {
         document.getElementById("render-object").innerHTML =
           "You tried getting my resume when you deleted it, didn't you?";
       }
-
       break;
     case "projects":
-      
       var projectObject = createProjects();
-      
       document.getElementById("render-object").appendChild(projectObject);
-
       break;
   }
 }
