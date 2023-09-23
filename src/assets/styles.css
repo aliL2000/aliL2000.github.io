@@ -14,6 +14,15 @@ select {
   font-family: "Raleway";
   font-weight: bolder;
   font-size: 2vw;
+  text-align: left;
+  margin: 0.5em 0em 0em 0.5em;
+}
+
+h2 {
+  font-weight:bold;
+  font-size: 1.25vw;
+  text-align: left;
+  margin: 0.5em 0em 0em 1em;
 }
 
 #request-box,
@@ -29,7 +38,6 @@ select {
   width: 30%;
   display: inline-block;
 }
-
 
 #render-object {
   margin: auto;
