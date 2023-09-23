@@ -77,3 +77,24 @@ function setPutForm() {}
 // JSX is better? (do research on that)
 // Why is the raw code not put into a helper function that just repeats what is needed?
 // JSDoc, for documentation purposes
+
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', (event) => {
+  const x = event.clientX;
+  const y = event.clientY;
+  setTimeout(() => {
+    cursor.style.left = x + 'px';
+    cursor.style.top = y + 'px';
+  },100);
+});
+
+cursor.addEventListener('mouseover', (event) => {
+  const targetElement = event.target;
+  if (targetElement.tagName.toLowerCase() === 'embed') {
+    cursor.style.pointerEvents = 'none'; // Disable pointer events on the cursor
+  } else {
+    cursor.style.pointerEvents = 'auto'; // Enable pointer events on the cursor
+  }
+});
+
