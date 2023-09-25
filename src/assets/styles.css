@@ -35,9 +35,10 @@ h2 {
   display: inline-block;
 }
 
-#description-container {
-  width: 30%;
-  display: inline-block;
+#welcome,#welcome-2 {
+  max-width: 500px;
+  margin: auto;
+  margin-bottom: 5px;
 }
 
 #render-object {
@@ -54,6 +55,30 @@ embed {
   width: 80%;
 }
 
+#project-container {
+  margin-left:20px;
+}
+
+#tech-tag-container {
+  text-align: left;
+}
+
+#description-container {
+  width: 30%;
+  display: inline-block;
+}
+
+#tech-tag {
+  background-color: black;
+  color: white;
+  display: inline-block;
+  margin: 3px;
+  padding: 5px 12px 5px 12px;
+  border-radius: 12px;
+}
+
+
+
 footer {
   background-color: black;
   color: white;
@@ -61,20 +86,4 @@ footer {
   justify-content: center;
   position: absolute;
   bottom: 0;
-}
-
-#tech-tag-container {
-  text-align: left;
-}
-
-#tech-tag {
-  background-color: black;
-  color: white;
-  display: inline-block;
-  margin: 1px;
-}
-
-#welcome-2 {
-  max-width: 500px;
-  margin: auto;
 }

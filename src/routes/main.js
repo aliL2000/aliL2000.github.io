@@ -23,8 +23,6 @@ function setRequestBar(requestType) {
   switch (requestType) {
     case "get":
       setGetForm();
-      document.getElementById("test").innerHTML =
-        document.getElementById("object-choice").value;
       document
         .getElementById("object-choice")
         .addEventListener("change", function () {
