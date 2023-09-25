@@ -4,6 +4,7 @@ body {
   text-align: center;
   font-size: 1vw;
   margin: 0;
+  overflow: visible;
 }
 
 select {
@@ -14,6 +15,15 @@ select {
   font-family: "Raleway";
   font-weight: bolder;
   font-size: 2vw;
+  text-align: left;
+  margin: 0.5em 0em 0em 0.5em;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1.25vw;
+  text-align: left;
+  margin: 0.5em 0em 0em 1em;
 }
 
 #request-box,
@@ -25,15 +35,15 @@ select {
   display: inline-block;
 }
 
-#description-container {
-  width: 30%;
-  display: inline-block;
+#welcome,#welcome-2 {
+  max-width: 500px;
+  margin: auto;
+  margin-bottom: 5px;
 }
-
 
 #render-object {
   margin: auto;
-  width: 85%;
+  width: 95%;
   border: 3px solid rgb(166, 166, 166);
   background: rgb(255, 255, 255);
   border-radius: 10px;
@@ -45,22 +55,41 @@ embed {
   width: 80%;
 }
 
-footer {
-  background-color: black;
-  color: white;
-  width: 100%;
-  justify-content: center;
-  position: absolute;
-  bottom: 0;
+#projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create three equal columns */
+  gap: 10px; /* Adjust the gap between items as needed */
 }
 
-#tech-tag-container {
-  text-align: left;
+#projects h1 {
+  margin-bottom: 0;
+  margin-top:40px;
+  padding-bottom: 25px;
+}
+
+#projects a {
+  margin: 25px 5px 25px 5px;
+}
+
+#description-container {
+  width: 500px;
+  display: inline-block;
 }
 
 #tech-tag {
   background-color: black;
   color: white;
   display: inline-block;
-  margin: 1px;
+  margin: 0px 3px 20px 3px;
+  padding: 5px 12px 5px 12px;
+  border-radius: 12px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  bottom: 0;
 }

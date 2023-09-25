@@ -25,37 +25,18 @@ const technologies = [
 ];
 
 function createProjects() {
-  //Create each project as it's own seperate object
-  var project1 = createProject(
-    projectNames[0],
-    projectLinks[0],
-    paragraphs[0],
-    technologies[0]
-  );
-  var project2 = createProject(
-    projectNames[1],
-    projectLinks[1],
-    paragraphs[1],
-    technologies[1]
-  );
-  var project3 = createProject(
-    projectNames[2],
-    projectLinks[2],
-    paragraphs[2],
-    technologies[2]
-  );
-  var project4 = createProject(
-    projectNames[3],
-    projectLinks[3],
-    paragraphs[3],
-    technologies[3]
-  );
   //Create a div tag that encapsulates all projects, and appends it to the parent div
   var projects = document.createElement("div");
-  projects.appendChild(project1);
-  projects.appendChild(project2);
-  projects.appendChild(project3);
-  projects.appendChild(project4);
+  for (var i = 0; i < projectNames.length; i++) {
+    var project = createProject(
+      projectNames[i],
+      projectLinks[i],
+      paragraphs[i],
+      technologies[i]
+    );
+    //Append each project to the div, as it's made
+    projects.appendChild(project);
+  }
   return projects;
 }
 
@@ -74,12 +55,18 @@ function createProject(name, url, description, technologies) {
     link.target = "_blank";
     project.append(link);
   }
+  else {
+    var link = document.createElement("a");
+    link.style.visibility = "hidden";
+    project.append(link);
+  }
   //Add descriptions
   var projectDescription = document.createElement("p");
   projectDescription.id = "description-container";
   projectDescription.innerHTML = description;
   project.append(projectDescription);
   //Render the tech-stack used
+  project.id = "projects";
   project.append(renderTechStack(technologies));
   return project;
 }
