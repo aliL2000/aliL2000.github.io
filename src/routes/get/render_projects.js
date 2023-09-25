@@ -55,12 +55,18 @@ function createProject(name, url, description, technologies) {
     link.target = "_blank";
     project.append(link);
   }
+  else {
+    var link = document.createElement("a");
+    link.style.visibility = "hidden";
+    project.append(link);
+  }
   //Add descriptions
   var projectDescription = document.createElement("p");
   projectDescription.id = "description-container";
   projectDescription.innerHTML = description;
   project.append(projectDescription);
   //Render the tech-stack used
+  project.id = "projects";
   project.append(renderTechStack(technologies));
   return project;
 }
