@@ -4,6 +4,7 @@ body {
   text-align: center;
   font-size: 1vw;
   margin: 0;
+  overflow: visible;
 }
 
 select {
@@ -19,7 +20,7 @@ select {
 }
 
 h2 {
-  font-weight:bold;
+  font-weight: bold;
   font-size: 1.25vw;
   text-align: left;
   margin: 0.5em 0em 0em 1em;
@@ -41,7 +42,7 @@ h2 {
 
 #render-object {
   margin: auto;
-  width: 85%;
+  width: 95%;
   border: 3px solid rgb(166, 166, 166);
   background: rgb(255, 255, 255);
   border-radius: 10px;
@@ -71,4 +72,9 @@ footer {
   color: white;
   display: inline-block;
   margin: 1px;
+}
+
+#welcome-2 {
+  max-width: 500px;
+  margin: auto;
 }

@@ -1,7 +1,11 @@
 import { setGetForm, setObjectView } from "./get/get.js";
 import { setPostForm, setPostView } from "./post/post.js";
 
-import { setDeleteDescription, setDeleteForm, setDeletedView } from "./delete/delete.js";
+import {
+  setDeleteDescription,
+  setDeleteForm,
+  setDeletedView,
+} from "./delete/delete.js";
 
 export let isResumeDeleted = false;
 // let isStylingDeleted = false;
@@ -24,8 +28,7 @@ function setRequestBar(requestType) {
       document
         .getElementById("object-choice")
         .addEventListener("change", function () {
-          setObjectView(
-            document.getElementById("object-choice").value);
+          setObjectView(document.getElementById("object-choice").value);
         });
       break;
     case "post":
