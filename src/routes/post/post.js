@@ -27,8 +27,15 @@ function setPostView(object) {
     case "contact":
       var OR = document.createElement("h3");
       OR.innerHTML = "OR";
-
-
+      //Append the github link photo
+      document.getElementById("render-object").appendChild(OR);
+      var githubLink = document.createElement("a");
+      githubLink.href = "https://github.com/aliL2000";
+      var githubPhoto = document.createElement("img");
+      githubPhoto.src = "../src/assets/github_logo.png";
+      githubLink.appendChild(githubPhoto);
+      document.getElementById("render-object").appendChild(githubLink);
+      //Append the email container to the site
       document.getElementById("render-object").appendChild(OR);
       var emailObject = document.createElement("textarea");
       emailObject.id = "emailBody";
