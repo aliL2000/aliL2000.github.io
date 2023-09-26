@@ -25,10 +25,28 @@ function setPostView(object) {
   document.getElementById("render-object").innerHTML = "";
   switch (object) {
     case "contact":
-      var emailObject = document.createElement("a");
-      emailObject.href = "mailto:aliladha2000@gmail.com";
-      emailObject.innerHTML = "Email";
+      var OR = document.createElement("h3");
+      OR.innerHTML = "OR";
+
+
+      document.getElementById("render-object").appendChild(OR);
+      var emailObject = document.createElement("textarea");
+      emailObject.id = "emailBody";
+      var button = document.createElement("button");
+      button.id = "sendButton";
+      button.innerHTML = "Send Email";
       document.getElementById("render-object").appendChild(emailObject);
+      document.getElementById("render-object").appendChild(button);
+      document.getElementById('sendButton').addEventListener('click', function() {
+        const emailBody = encodeURIComponent(document.getElementById('emailBody').value);
+        const mailtoLink = `mailto:aliladha2000@gmail.com?body=${emailBody}`;
+        window.location.href = mailtoLink;
+    });
+
+      // var temp = document.createElement("a");
+      // temp.href = "mailto:aliladha2000@gmail.com";
+      // temp.innerHTML = "Email";
+      // document.getElementById("render-object").appendChild(temp);
       break;
   }
 }
