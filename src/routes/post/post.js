@@ -33,7 +33,7 @@ function setPostView(object) {
       var githubLink = document.createElement("a");
       githubLink.href = "https://www.linkedin.com/in/ali-hassan-ladha/";
       var githubPhoto = document.createElement("img");
-      githubPhoto.src = "../src/assets/linkedin_photo.jpg";
+      githubPhoto.src = "../src/assets/linkedin_photo.png";
       githubLink.appendChild(githubPhoto);
       document.getElementById("render-object").appendChild(githubLink);
       //Append the github link photo
