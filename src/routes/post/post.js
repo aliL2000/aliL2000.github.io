@@ -33,7 +33,7 @@ function setPostView(object) {
       var linkedInLink = document.createElement("a");
       linkedInLink.href = "https://www.linkedin.com/in/ali-hassan-ladha/";
       var linkedInPhoto = document.createElement("img");
-      linkedInPhoto.classList.add('photo');
+      linkedInPhoto.classList.add("photo");
       linkedInPhoto.src = "../src/assets/linkedin_photo.png";
       linkedInLink.appendChild(linkedInPhoto);
       document.getElementById("render-object").appendChild(linkedInLink);
@@ -42,7 +42,7 @@ function setPostView(object) {
       var githubLink = document.createElement("a");
       githubLink.href = "https://github.com/aliL2000";
       var githubPhoto = document.createElement("img");
-      githubPhoto.classList.add('photo');
+      githubPhoto.classList.add("photo");
       githubPhoto.src = "../src/assets/github_logo.png";
       githubLink.appendChild(githubPhoto);
       document.getElementById("render-object").appendChild(githubLink);
@@ -55,11 +55,15 @@ function setPostView(object) {
       button.innerHTML = "Send Email";
       document.getElementById("render-object").appendChild(emailObject);
       document.getElementById("render-object").appendChild(button);
-      document.getElementById('sendButton').addEventListener('click', function() {
-        const emailBody = encodeURIComponent(document.getElementById('emailBody').value);
-        const mailtoLink = `mailto:aliladha2000@gmail.com?body=${emailBody}`;
-        window.location.href = mailtoLink;
-    });
+      document
+        .getElementById("sendButton")
+        .addEventListener("click", function () {
+          const emailBody = encodeURIComponent(
+            document.getElementById("emailBody").value
+          );
+          const mailtoLink = `mailto:aliladha2000@gmail.com?body=${emailBody}`;
+          window.location.href = mailtoLink;
+        });
       break;
   }
 }

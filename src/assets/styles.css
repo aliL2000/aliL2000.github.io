@@ -35,7 +35,8 @@ h2 {
   display: inline-block;
 }
 
-#welcome,#welcome-2 {
+#welcome,
+#welcome-2 {
   max-width: 500px;
   margin: auto;
   margin-bottom: 5px;
@@ -63,7 +64,7 @@ embed {
 
 #projects h1 {
   margin-bottom: 0;
-  margin-top:40px;
+  margin-top: 40px;
   padding-bottom: 25px;
 }
 
@@ -88,6 +89,11 @@ embed {
 .photo {
   max-width: 200px;
   max-height: 200px;
+}
+
+#sendButton {
+  display: block;
+  margin: auto;
 }
 
 footer {
