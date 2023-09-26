@@ -25,10 +25,19 @@ function setPostView(object) {
   document.getElementById("render-object").innerHTML = "";
   switch (object) {
     case "contact":
-      var OR = document.createElement("h3");
-      OR.innerHTML = "OR";
+      var OR1 = document.createElement("h3");
+      OR1.innerHTML = "OR";
+      var OR2 = document.createElement("h3");
+      OR2.innerHTML = "OR";
+      //Append the LinkedIn link
+      var githubLink = document.createElement("a");
+      githubLink.href = "https://www.linkedin.com/in/ali-hassan-ladha/";
+      var githubPhoto = document.createElement("img");
+      githubPhoto.src = "../src/assets/linkedin_photo.jpg";
+      githubLink.appendChild(githubPhoto);
+      document.getElementById("render-object").appendChild(githubLink);
       //Append the github link photo
-      document.getElementById("render-object").appendChild(OR);
+      document.getElementById("render-object").appendChild(OR1);
       var githubLink = document.createElement("a");
       githubLink.href = "https://github.com/aliL2000";
       var githubPhoto = document.createElement("img");
@@ -36,7 +45,7 @@ function setPostView(object) {
       githubLink.appendChild(githubPhoto);
       document.getElementById("render-object").appendChild(githubLink);
       //Append the email container to the site
-      document.getElementById("render-object").appendChild(OR);
+      document.getElementById("render-object").appendChild(OR2);
       var emailObject = document.createElement("textarea");
       emailObject.id = "emailBody";
       var button = document.createElement("button");
