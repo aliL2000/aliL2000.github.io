@@ -30,17 +30,19 @@ function setPostView(object) {
       var OR2 = document.createElement("h3");
       OR2.innerHTML = "OR";
       //Append the LinkedIn link
-      var githubLink = document.createElement("a");
-      githubLink.href = "https://www.linkedin.com/in/ali-hassan-ladha/";
-      var githubPhoto = document.createElement("img");
-      githubPhoto.src = "../src/assets/linkedin_photo.png";
-      githubLink.appendChild(githubPhoto);
-      document.getElementById("render-object").appendChild(githubLink);
-      //Append the github link photo
+      var linkedInLink = document.createElement("a");
+      linkedInLink.href = "https://www.linkedin.com/in/ali-hassan-ladha/";
+      var linkedInPhoto = document.createElement("img");
+      linkedInPhoto.classList.add('photo');
+      linkedInPhoto.src = "../src/assets/linkedin_photo.png";
+      linkedInLink.appendChild(linkedInPhoto);
+      document.getElementById("render-object").appendChild(linkedInLink);
+      //Append the Github link photo
       document.getElementById("render-object").appendChild(OR1);
       var githubLink = document.createElement("a");
       githubLink.href = "https://github.com/aliL2000";
       var githubPhoto = document.createElement("img");
+      githubPhoto.classList.add('photo');
       githubPhoto.src = "../src/assets/github_logo.png";
       githubLink.appendChild(githubPhoto);
       document.getElementById("render-object").appendChild(githubLink);
@@ -58,11 +60,6 @@ function setPostView(object) {
         const mailtoLink = `mailto:aliladha2000@gmail.com?body=${emailBody}`;
         window.location.href = mailtoLink;
     });
-
-      // var temp = document.createElement("a");
-      // temp.href = "mailto:aliladha2000@gmail.com";
-      // temp.innerHTML = "Email";
-      // document.getElementById("render-object").appendChild(temp);
       break;
   }
 }

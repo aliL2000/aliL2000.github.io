@@ -85,6 +85,11 @@ embed {
   border-radius: 12px;
 }
 
+.photo {
+  max-width: 200px;
+  max-height: 200px;
+}
+
 footer {
   background-color: black;
   color: white;
