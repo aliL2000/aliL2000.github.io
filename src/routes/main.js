@@ -78,3 +78,27 @@ function setPutForm() {}
 // JSX is better? (do research on that)
 // Why is the raw code not put into a helper function that just repeats what is needed?
 // JSDoc, for documentation purposes
+const modal = document.getElementById('myModal');
+const overlay = document.getElementById('overlay');
+
+// Get references to the open and close buttons
+const openModalBtn = document.getElementById('openModalBtn');
+const closeModalBtn = document.getElementById('closeModalBtn');
+
+// Function to open the modal
+function openModal() {
+    modal.style.display = 'block';
+    overlay.style.display = 'block';
+}
+
+// Function to close the modal
+function closeModal() {
+    modal.style.display = 'none';
+    overlay.style.display = 'none';
+}
+
+// Event listener for opening the modal
+openModalBtn.addEventListener('click', openModal);
+
+// Event listener for closing the modal
+closeModalBtn.addEventListener('click', closeModal);
