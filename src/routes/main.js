@@ -79,26 +79,32 @@ function setPutForm() {}
 // Why is the raw code not put into a helper function that just repeats what is needed?
 // JSDoc, for documentation purposes
 const modal = document.getElementById('myModal');
-const overlay = document.getElementById('overlay');
 
 // Get references to the open and close buttons
-const openModalBtn = document.getElementById('openModalBtn');
-const closeModalBtn = document.getElementById('closeModalBtn');
+const changeModalBtn = document.getElementById('openModalBtn');
 
 // Function to open the modal
-function openModal() {
-    modal.style.display = 'block';
-    overlay.style.display = 'block';
+
+const buttonRect = openModalBtn.getBoundingClientRect();
+modal.style.top = buttonRect.bottom + 'px';
+modal.style.left = buttonRect.left + 'px';
+
+function changeModal() {
+    if (modal.style.display === 'block'){
+      modal.style.display = 'none';
+      changeModalBtn.innerHTML = "Open Modal";
+    }
+    else {
+      modal.style.display = 'block';
+      const buttonRect = openModalBtn.getBoundingClientRect();
+      console.log(buttonRect.x);
+      console.log(buttonRect.y);
+      //modal.style.top = buttonRect.top + 100 + 'px';
+      //modal.style.left = buttonRect.left + 'px';
+      changeModalBtn.innerHTML = "Close Modal";
+    }
 }
 
-// Function to close the modal
-function closeModal() {
-    modal.style.display = 'none';
-    overlay.style.display = 'none';
-}
 
 // Event listener for opening the modal
-openModalBtn.addEventListener('click', openModal);
-
-// Event listener for closing the modal
-closeModalBtn.addEventListener('click', closeModal);
+changeModalBtn.addEventListener('click', changeModal);
