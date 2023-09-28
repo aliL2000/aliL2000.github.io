@@ -104,3 +104,17 @@ footer {
   position: relative;
   bottom: 0;
 }
+
+/* #openModalBtn {
+  position: fixed;
+  right: 25px;
+  top: 25px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+} */
