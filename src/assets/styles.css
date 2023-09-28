@@ -44,9 +44,6 @@ h2 {
 
 #render-object {
   margin: auto;
-  border: 3px solid rgb(166, 166, 166);
-  background: rgb(255, 255, 255);
-  border-radius: 10px;
   padding: 10px;
 }
 
@@ -59,6 +56,8 @@ embed {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Create three equal columns */
   gap: 10px; /* Adjust the gap between items as needed */
+  border: 3px solid rgb(166, 166, 166);
+  margin-bottom: 50px;
 }
 
 #projects h1 {
@@ -75,6 +74,7 @@ embed {
 #description-container {
   width: 500px;
   display: inline-block;
+  padding-top: 10%;
 }
 
 #tech-tag {
@@ -96,11 +96,12 @@ h3{
 }
 
 footer {
-  background-color: black;
-  color: white;
-  width: 100%;
-  justify-content: center;
-  position: relative;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  left: 0;
   bottom: 0;
+  width: 100%;
+  margin-top: 50px;
 }
 
