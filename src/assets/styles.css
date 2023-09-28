@@ -8,6 +8,16 @@ body {
   color:#D1E8E2;
 }
 
+.reset-body-styles {
+  background-color: transparent !important;
+  font-family: initial !important;
+  text-align: initial !important;
+  font-size: initial !important;
+  margin: initial !important;
+  overflow: initial !important;
+  color: initial !important;
+}
+
 select {
   font-family: "Montserrat", Helvetica, sans-serif;
 }
