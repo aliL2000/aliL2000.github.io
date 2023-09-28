@@ -44,7 +44,6 @@ h2 {
 
 #render-object {
   margin: auto;
-  width: 95%;
   border: 3px solid rgb(166, 166, 166);
   background: rgb(255, 255, 255);
   border-radius: 10px;
@@ -70,6 +69,7 @@ embed {
 
 #projects a {
   margin: 25px 5px 25px 5px;
+  display: inline;
 }
 
 #description-container {
@@ -91,9 +91,8 @@ embed {
   max-height: 200px;
 }
 
-#sendButton {
-  display: block;
-  margin: auto;
+h3{
+  display: inline-block;
 }
 
 footer {
@@ -104,3 +103,4 @@ footer {
   position: relative;
   bottom: 0;
 }
+

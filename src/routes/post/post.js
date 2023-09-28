@@ -25,6 +25,10 @@ function setPostView(object) {
   document.getElementById("render-object").innerHTML = "";
   switch (object) {
     case "contact":
+      var divElement = document.createElement("div");
+      divElement.id = "contacts"
+      document.getElementById("render-object").appendChild(divElement);
+
       var OR1 = document.createElement("h3");
       OR1.innerHTML = "OR";
       var OR2 = document.createElement("h3");
@@ -36,34 +40,26 @@ function setPostView(object) {
       linkedInPhoto.classList.add("photo");
       linkedInPhoto.src = "../src/assets/linkedin_photo.png";
       linkedInLink.appendChild(linkedInPhoto);
-      document.getElementById("render-object").appendChild(linkedInLink);
+      divElement.appendChild(linkedInLink);
       //Append the Github link photo
-      document.getElementById("render-object").appendChild(OR1);
+      divElement.appendChild(OR1);
       var githubLink = document.createElement("a");
       githubLink.href = "https://github.com/aliL2000";
       var githubPhoto = document.createElement("img");
       githubPhoto.classList.add("photo");
       githubPhoto.src = "../src/assets/github_logo.png";
       githubLink.appendChild(githubPhoto);
-      document.getElementById("render-object").appendChild(githubLink);
+      divElement.appendChild(githubLink);
       //Append the email container to the site
-      document.getElementById("render-object").appendChild(OR2);
-      var emailObject = document.createElement("textarea");
-      emailObject.id = "emailBody";
-      var button = document.createElement("button");
-      button.id = "sendButton";
-      button.innerHTML = "Send Email";
-      document.getElementById("render-object").appendChild(emailObject);
-      document.getElementById("render-object").appendChild(button);
-      document
-        .getElementById("sendButton")
-        .addEventListener("click", function () {
-          const emailBody = encodeURIComponent(
-            document.getElementById("emailBody").value
-          );
-          const mailtoLink = `mailto:aliladha2000@gmail.com?body=${emailBody}`;
-          window.location.href = mailtoLink;
-        });
+      divElement.appendChild(OR2);
+      var emailLink = document.createElement("a");
+      emailLink.href = 'mailto:aliladha2000@gmail.com';
+      var emailPhoto = document.createElement("img");
+      emailPhoto.classList.add("photo");
+      emailPhoto.src = "../src/assets/email_logo.png";
+      emailLink.appendChild(emailPhoto);
+      divElement.appendChild(emailLink);
+
       break;
   }
 }
