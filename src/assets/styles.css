@@ -1,10 +1,21 @@
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: #2C3531;
   font-family: "Montserrat", Helvetica, sans-serif;
   text-align: center;
   font-size: 1vw;
   margin: 0;
   overflow: visible;
+  color:#D1E8E2;
+}
+
+.reset-body-styles {
+  background-color: transparent !important;
+  font-family: initial !important;
+  text-align: initial !important;
+  font-size: initial !important;
+  margin: initial !important;
+  overflow: initial !important;
+  color: initial !important;
 }
 
 select {
@@ -44,11 +55,8 @@ h2 {
 
 #render-object {
   margin: auto;
-  width: 95%;
-  border: 3px solid rgb(166, 166, 166);
-  background: rgb(255, 255, 255);
-  border-radius: 10px;
   padding: 10px;
+  margin-bottom: 20px;
 }
 
 embed {
@@ -60,6 +68,9 @@ embed {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Create three equal columns */
   gap: 10px; /* Adjust the gap between items as needed */
+  border: 3px solid rgb(166, 166, 166);
+  margin-bottom: 50px;
+  align-items: center
 }
 
 #projects h1 {
@@ -70,16 +81,18 @@ embed {
 
 #projects a {
   margin: 25px 5px 25px 5px;
+  display: inline;
 }
 
 #description-container {
   width: 500px;
   display: inline-block;
+  padding-top: 10%;
 }
 
 #tech-tag {
-  background-color: black;
-  color: white;
+  background-color: #FFCB9A;
+  color: #000000;
   display: inline-block;
   margin: 0px 3px 20px 3px;
   padding: 5px 12px 5px 12px;
@@ -91,16 +104,25 @@ embed {
   max-height: 200px;
 }
 
-#sendButton {
-  display: block;
-  margin: auto;
+h3{
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#contacts {
+  display:flex;
+  justify-content: center; /* Horizontal center alignment */
+  align-items: center; /* Vertical center alignment */
 }
 
 footer {
-  background-color: black;
-  color: white;
-  width: 100%;
-  justify-content: center;
-  position: relative;
+  background-color: #116466;
+  color: #ffffff;
+  position: fixed;
+  left: 0;
   bottom: 0;
+  width: 100%;
+  margin-top: 50px;
 }
+

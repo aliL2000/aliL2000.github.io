@@ -15,10 +15,10 @@ function setDeleteForm() {
   optionDefault.selected = true;
   select.appendChild(optionDefault);
 
-//   var option1 = document.createElement("option");
-//   option1.value = "resume";
-//   option1.innerHTML = "Resume";
-//   select.appendChild(option1);
+  //   var option1 = document.createElement("option");
+  //   option1.value = "resume";
+  //   option1.innerHTML = "Resume";
+  //   select.appendChild(option1);
 
   var option2 = document.createElement("option");
   option2.value = "styling";
@@ -56,8 +56,11 @@ function setDeletedView(object) {
         "Welp, you deleted the resume, damn!";
       break;
     case "styling":
-      var isStylingDeleted = true;
       document.styleSheets[0].disabled = !document.styleSheets[0].disabled;
+      const bodyElement = document.body;
+      const footerElement = document.querySelector('footer');
+      bodyElement.classList.add('reset-body-styles');
+      footerElement.classList.add('reset-body-styles');
       document.getElementById("render-object").innerHTML =
         "Welp, you deleted all the styling on this website!";
       break;

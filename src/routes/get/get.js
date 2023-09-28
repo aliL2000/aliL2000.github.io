@@ -35,7 +35,7 @@ function setObjectView(object) {
     case "resume":
       if (!isResumeDeleted) {
         var resumeObject = document.createElement("embed");
-        resumeObject.src = "assets/AliLadhaResume.pdf";
+        resumeObject.src = "assets/RESUMEDEVELOPER.pdf";
         resumeObject.type = "application/pdf";
         document.getElementById("render-object").appendChild(resumeObject);
       } else {
