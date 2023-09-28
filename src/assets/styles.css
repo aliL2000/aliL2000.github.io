@@ -1,10 +1,11 @@
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: #2C3531;
   font-family: "Montserrat", Helvetica, sans-serif;
   text-align: center;
   font-size: 1vw;
   margin: 0;
   overflow: visible;
+  color:#D1E8E2;
 }
 
 select {
@@ -45,6 +46,7 @@ h2 {
 #render-object {
   margin: auto;
   padding: 10px;
+  margin-bottom: 20px;
 }
 
 embed {
@@ -58,6 +60,7 @@ embed {
   gap: 10px; /* Adjust the gap between items as needed */
   border: 3px solid rgb(166, 166, 166);
   margin-bottom: 50px;
+  align-items: center
 }
 
 #projects h1 {
@@ -78,8 +81,8 @@ embed {
 }
 
 #tech-tag {
-  background-color: black;
-  color: white;
+  background-color: #FFCB9A;
+  color: #000000;
   display: inline-block;
   margin: 0px 3px 20px 3px;
   padding: 5px 12px 5px 12px;
@@ -93,11 +96,19 @@ embed {
 
 h3{
   display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#contacts {
+  display:flex;
+  justify-content: center; /* Horizontal center alignment */
+  align-items: center; /* Vertical center alignment */
 }
 
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #116466;
+  color: #ffffff;
   position: fixed;
   left: 0;
   bottom: 0;
