@@ -11,12 +11,16 @@ export let isResumeDeleted = false;
 // let isStylingDeleted = false;
 // let isEverythingDeleted = false;
 
+renderJSON()
+
 document.getElementById("request-type").addEventListener("change", function () {
   event.preventDefault();
   document.getElementById("demo").innerHTML =
     document.getElementById("request-type").value;
   setRequestBar(document.getElementById("request-type").value);
 });
+
+
 
 function setRequestBar(requestType) {
   resetForm(document.getElementById("demo"));
@@ -79,18 +83,20 @@ function setPutForm() {}
 // Why is the raw code not put into a helper function that just repeats what is needed?
 // JSDoc, for documentation purposes
 
-const jsonObject = {
-  "status": "success",
-  "data": {
-      "id": 123,
-      "name": "John Doe",
-      "email": "john.doe@example.com",
-      "age": 30
-  }
-};
-
-// Convert the JSON object to a formatted JSON string
-const jsonString = JSON.stringify(jsonObject, null, 2);
-
-// Display the formatted JSON string in the <pre> element
-document.getElementById("json-container").textContent = jsonString;
+function renderJSON() {
+  let jsonObject = {
+    "status": "success",
+    "data": {
+        "id": 123,
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "age": 30
+    }
+  };
+  
+  // Convert the JSON object to a formatted JSON string
+  const jsonString = JSON.stringify(jsonObject, null, 2);
+  
+  // Display the formatted JSON string in the <pre> element
+  document.getElementById("json-container").textContent = jsonString;
+}

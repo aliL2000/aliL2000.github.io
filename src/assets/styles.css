@@ -1,11 +1,11 @@
 body {
-  background-color: #2C3531;
+  background-color: #2c3531;
   font-family: "Montserrat", Helvetica, sans-serif;
   text-align: center;
   font-size: 1vw;
   margin: 0;
   overflow: visible;
-  color:#D1E8E2;
+  color: #d1e8e2;
 }
 
 .reset-body-styles {
@@ -70,7 +70,7 @@ embed {
   gap: 10px; /* Adjust the gap between items as needed */
   border: 3px solid rgb(166, 166, 166);
   margin-bottom: 50px;
-  align-items: center
+  align-items: center;
 }
 
 #projects h1 {
@@ -91,7 +91,7 @@ embed {
 }
 
 #tech-tag {
-  background-color: #FFCB9A;
+  background-color: #ffcb9a;
   color: #000000;
   display: inline-block;
   margin: 0px 3px 20px 3px;
@@ -104,16 +104,25 @@ embed {
   max-height: 200px;
 }
 
-h3{
+h3 {
   display: inline-block;
   margin-left: 20px;
   margin-right: 20px;
 }
 
 #contacts {
-  display:flex;
+  display: flex;
   justify-content: center; /* Horizontal center alignment */
   align-items: center; /* Vertical center alignment */
+}
+
+#json-block {
+  text-align: left;
+  margin-left: 100px;
+}
+
+#json-container {
+  margin-left: 25px;
 }
 
 footer {
@@ -125,4 +134,3 @@ footer {
   width: 100%;
   margin-top: 50px;
 }
-
