@@ -43,7 +43,12 @@ function setRequestBar(requestType) {
         .getElementById("object-choice")
         .addEventListener("change", function () {
           setPostView(document.getElementById("object-choice").value);
+          renderJSON(
+            requestType,
+            document.getElementById("object-choice").value
+          );
         });
+        
       break;
     case "patch":
       //TODO: Brainstorm and implement this route
@@ -110,27 +115,41 @@ function renderJSON(requestType, requestChoice) {
         {
           id: 2,
           title: "ROSEN Capstone",
-          description: "Lead BE Developer for a ML Web application performing object detection, streamlining manual analysis and enhancing overall efficiency.",
+          description:
+            "Lead BE Developer for a ML Web application performing object detection, streamlining manual analysis and enhancing overall efficiency.",
           link: "https://github.com/Rosen-Team-B/Rosen_B_2",
           tags: ["Django", "DjangoREST", "MongoDB"],
         },
         {
           id: 3,
           title: "Canvas Gamification",
-          description: "Developed a JUnit framework, testing and validating student-submitted code in an introductory computer science course.",
+          description:
+            "Developed a JUnit framework, testing and validating student-submitted code in an introductory computer science course.",
           tags: ["Java", "JUnit"],
         },
         {
           id: 4,
           title: "Neetcode 150",
-          description: "Solving and optimizing the Neetcode 150 problems, practicing my algorithm analysis skills and code development.",
+          description:
+            "Solving and optimizing the Neetcode 150 problems, practicing my algorithm analysis skills and code development.",
           link: "https://github.com/aliL2000/leetcode-practice",
           tags: ["Python", "Java"],
         },
       ];
     }
   } else if (requestType === "post") {
+    if (requestChoice === "contact") {
+      choiceData = {
+        name: "Ali Ladha",
+        social_links: {
+          linkedin: "https://www.linkedin.com/in/ali-hassan-ladha/",
+          github: "https://github.com/aliL2000",
+          email: "mailto:aliladha2000@gmail.com"
+        },
+      };
+    }
   } else if (requestType === "delete") {
+
   } else {
     choiceData = {
       requestType: "GET",
