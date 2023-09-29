@@ -78,3 +78,19 @@ function setPutForm() {}
 // JSX is better? (do research on that)
 // Why is the raw code not put into a helper function that just repeats what is needed?
 // JSDoc, for documentation purposes
+
+const jsonObject = {
+  "status": "success",
+  "data": {
+      "id": 123,
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "age": 30
+  }
+};
+
+// Convert the JSON object to a formatted JSON string
+const jsonString = JSON.stringify(jsonObject, null, 2);
+
+// Display the formatted JSON string in the <pre> element
+document.getElementById("json-container").textContent = jsonString;
