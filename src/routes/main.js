@@ -11,7 +11,7 @@ export let isResumeDeleted = false;
 // let isStylingDeleted = false;
 // let isEverythingDeleted = false;
 
-renderJSON()
+renderJSON();
 
 document.getElementById("request-type").addEventListener("change", function () {
   event.preventDefault();
@@ -19,8 +19,6 @@ document.getElementById("request-type").addEventListener("change", function () {
     document.getElementById("request-type").value;
   setRequestBar(document.getElementById("request-type").value);
 });
-
-
 
 function setRequestBar(requestType) {
   resetForm(document.getElementById("demo"));
@@ -31,7 +29,12 @@ function setRequestBar(requestType) {
         .getElementById("object-choice")
         .addEventListener("change", function () {
           setObjectView(document.getElementById("object-choice").value);
+          renderJSON(
+            requestType,
+            document.getElementById("object-choice").value
+          );
         });
+
       break;
     case "post":
       //Show users the updated url and what they can send
@@ -83,20 +86,68 @@ function setPutForm() {}
 // Why is the raw code not put into a helper function that just repeats what is needed?
 // JSDoc, for documentation purposes
 
-function renderJSON() {
-  let jsonObject = {
-    "status": "success",
-    "data": {
-        "id": 123,
-        "name": "John Doe",
-        "email": "john.doe@example.com",
-        "age": 30
+function renderJSON(requestType, requestChoice) {
+  let choiceData;
+  if (requestType === "get") {
+    if (requestChoice === "resume") {
+      choiceData = {
+        title: "Resume",
+        author: "Ali Ladha",
+        file_url: "../src/assets/RESUMEDEVELOPER.pdf",
+        file_type: "application/pdf",
+        file_size: "61.8 KB",
+      };
+    } else if (requestChoice === "projects") {
+      choiceData = [
+        {
+          id: 1,
+          title: "LumberViz",
+          description:
+            "Created an EDA tool that allows simultaneous filtering and visualization, providing users with insightful tools for data exploration.",
+          link: "https://github.com/aliL2000/olympic",
+          tags: ["Flask", "HTML", "JS", "CSS"],
+        },
+        {
+          id: 2,
+          title: "ROSEN Capstone",
+          description: "Lead BE Developer for a ML Web application performing object detection, streamlining manual analysis and enhancing overall efficiency.",
+          link: "https://github.com/Rosen-Team-B/Rosen_B_2",
+          tags: ["Django", "DjangoREST", "MongoDB"],
+        },
+        {
+          id: 3,
+          title: "Canvas Gamification",
+          description: "Developed a JUnit framework, testing and validating student-submitted code in an introductory computer science course.",
+          tags: ["Java", "JUnit"],
+        },
+        {
+          id: 4,
+          title: "Neetcode 150",
+          description: "Solving and optimizing the Neetcode 150 problems, practicing my algorithm analysis skills and code development.",
+          link: "https://github.com/aliL2000/leetcode-practice",
+          tags: ["Python", "Java"],
+        },
+      ];
     }
+  } else if (requestType === "post") {
+  } else if (requestType === "delete") {
+  } else {
+    choiceData = {
+      requestType: "GET",
+      content: "landingPage",
+      email: "aliladha2000@gmail.com",
+      profession: "Aspiring Backend Software Developer",
+    };
+  }
+
+  let jsonObject = {
+    status: "success",
+    data: choiceData,
   };
-  
+
   // Convert the JSON object to a formatted JSON string
   const jsonString = JSON.stringify(jsonObject, null, 2);
-  
+
   // Display the formatted JSON string in the <pre> element
   document.getElementById("json-container").textContent = jsonString;
 }
