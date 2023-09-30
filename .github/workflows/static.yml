@@ -40,7 +40,7 @@ jobs:
           path: './src'
       - name: Build and deploy
         run: |
-          cp -r src/assets public/assets
+          cp -r src/assets assets
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
