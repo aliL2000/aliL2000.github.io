@@ -38,7 +38,7 @@ function setPostView(object) {
       linkedInLink.href = "https://www.linkedin.com/in/ali-hassan-ladha/";
       var linkedInPhoto = document.createElement("img");
       linkedInPhoto.classList.add("photo");
-      linkedInPhoto.src = "../src/assets/linkedin_photo.png";
+      linkedInPhoto.src = "../src/assets/linkedinphoto.png";
       linkedInLink.appendChild(linkedInPhoto);
       divElement.appendChild(linkedInLink);
       //Append the Github link photo
@@ -47,7 +47,7 @@ function setPostView(object) {
       githubLink.href = "https://github.com/aliL2000";
       var githubPhoto = document.createElement("img");
       githubPhoto.classList.add("photo");
-      githubPhoto.src = "../src/assets/github_logo.png";
+      githubPhoto.src = "../src/assets/githublogo.png";
       githubLink.appendChild(githubPhoto);
       divElement.appendChild(githubLink);
       //Append the email container to the site
@@ -56,7 +56,7 @@ function setPostView(object) {
       emailLink.href = 'mailto:aliladha2000@gmail.com';
       var emailPhoto = document.createElement("img");
       emailPhoto.classList.add("photo");
-      emailPhoto.src = "../src/assets/email_logo.png";
+      emailPhoto.src = "../src/assets/emaillogo.png";
       emailLink.appendChild(emailPhoto);
       divElement.appendChild(emailLink);
 
