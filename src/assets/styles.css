@@ -84,6 +84,18 @@ embed {
   display: inline;
 }
 
+a:link {
+  color: #ffca9b;
+}
+
+a:visited {
+  color: #ffa047;
+}
+
+a:active {
+ color: #D1E8E2;
+}
+
 #description-container {
   width: 500px;
   display: inline-block;
@@ -128,6 +140,7 @@ h3 {
   background-color: #454545;
   color: #ffffff;
   border-radius: 10px;
+  white-space: pre-wrap;
 }
 
 footer {
