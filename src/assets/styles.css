@@ -59,7 +59,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-embed {
+iframe {
   height: 80%;
   width: 80%;
 }
@@ -131,6 +131,7 @@ h3 {
 #json-block {
   text-align: left;
   margin-left: 100px;
+  padding-bottom: 10px;
 }
 
 #json-container {

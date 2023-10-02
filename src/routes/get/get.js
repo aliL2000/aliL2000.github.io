@@ -34,9 +34,9 @@ function setObjectView(object) {
   switch (object) {
     case "resume":
       if (!isResumeDeleted) {
-        var resumeObject = document.createElement("embed");
-        resumeObject.src = "assets/RESUMEDEVELOPER.pdf";
-        resumeObject.type = "application/pdf";
+        var resumeObject = document.createElement("iframe");
+        resumeObject.src = "https://drive.google.com/file/d/1bQmsqXdmMvXCeAblgNK9XKHmlyHkgK68/preview";
+        resumeObject.allow = "autoplay";
         document.getElementById("render-object").appendChild(resumeObject);
       } else {
         document.getElementById("render-object").innerHTML =
