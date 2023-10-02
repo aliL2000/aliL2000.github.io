@@ -5,7 +5,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/styles.css" />
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width" />
   </head>
   <!-- Google tag (gtag.js) -->
   <script
@@ -22,42 +22,42 @@
   </script>
   <body>
     <div class="content">
-    <h1 id="title-name">Hi, I'm Ali Ladha</h1>
-    <h2>Dedicated and Detail-Oriented.</h2>
-    <h2>I'm driven by curiosity and thrive on optimizing solutions.</h2>
-    <div>
-      <form id="request-box">
-        <select name="request-type" id="request-type">
-          <option value="" hidden disabled selected>
-            Pick what you wanna do
-          </option>
-          <option value="get">GET (get my information)</option>
-          <option value="post">POST (send me information)</option>
-          <!--
+      <h1 id="title-name">Hi, I'm Ali Ladha</h1>
+      <h2>Dedicated and Detail-Oriented.</h2>
+      <h2>I'm driven by curiosity and thrive on optimizing solutions.</h2>
+      <div>
+        <form id="request-box">
+          <select name="request-type" id="request-type">
+            <option value="" hidden disabled selected>
+              Pick what you wanna do
+            </option>
+            <option value="get">GET (get my information)</option>
+            <option value="post">POST (send me information)</option>
+            <!--
             TODO: Implement the PATCH and PUT routes, determine if it's really needed too
             <option value="patch">PATCH (modify parts of my website)</option>
             <option value="put">PUT (add new elements to my website)</option>
           -->
-          <option value="delete">DELETE (delete parts of my website)</option>
-        </select>
-      </form>
-      <p id="demo"></p>
+            <option value="delete">DELETE (delete parts of my website)</option>
+          </select>
+        </form>
+        <p id="demo"></p>
+      </div>
+      <div id="render-object">
+        <p id="welcome">Hey there, welcome to my personal website!</p>
+        <p id="welcome-2">
+          It's like an HTTP request configurator designed to make things fun!
+          So, take a moment to explore and let me know what you think.
+        </p>
+      </div>
+      <div id="json-block">
+        <p id="json-explanation">
+          This is a JSON viewer, providing you with a sample server response
+          resulting from a request made to a remote server.
+        </p>
+        <pre id="json-container"></pre>
+      </div>
     </div>
-    <div id="render-object">
-      <p id="welcome">Hey there, welcome to my personal website!</p>
-      <p id="welcome-2">
-        It's like an HTTP request configurator designed to make things fun! So,
-        take a moment to explore and let me know what you think.
-      </p>
-    </div>
-    <div id="json-block">
-      <p id="json-explanation">
-        This is a JSON viewer, providing you with a sample server response
-        resulting from a request made to a remote server.
-      </p>
-      <pre id="json-container"></pre>
-    </div>
-  </div>
     <div id="footer">
       <p>Ali Ladha<br /></p>
     </div>
