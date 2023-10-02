@@ -65,7 +65,7 @@ function setRequestBar(requestType) {
         .getElementById("object-choice")
         .addEventListener("change", function () {
           //Render page with the elements they wanted removed
-          setDeleteDescription(document.getElementById("object-choice").value);
+          //setDeleteDescription(document.getElementById("object-choice").value);
           renderJSON(
             requestType,
             document.getElementById("object-choice").value

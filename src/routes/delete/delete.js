@@ -53,18 +53,18 @@ function setDeletedView(object) {
     case "resume":
       isResumeDeleted = true;
       document.getElementById("render-object").innerHTML =
-        "Welp, you deleted the resume, damn!";
+        "Welp, you deleted my resume!";
       break;
     case "styling":
-      document.styleSheets[0].disabled = !document.styleSheets[0].disabled;
-      const bodyElement = document.body;
-      const footerElement = document.querySelector('footer');
-      const jsonElement = document.getElementById("json-container");
-      bodyElement.classList.add('reset-body-styles');
-      footerElement.classList.add('reset-body-styles');
-      jsonElement.classList.add("reset-body-styles");
       document.getElementById("render-object").innerHTML =
         "Welp, you deleted all the styling on this website!";
+      document.styleSheets[0].disabled = !document.styleSheets[0].disabled;
+      const bodyElement = document.body;
+      const footerElement = document.getElementById("footer");
+      const jsonElement = document.getElementById("json-container");
+      bodyElement.classList.add("reset-body-styles");
+      footerElement.classList.add("reset-body-styles");
+      jsonElement.classList.add("reset-body-styles");
       break;
     case "everything":
       document.getElementsByTagName("html")[0].innerHTML =
