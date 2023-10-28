@@ -1,6 +1,5 @@
 import React from "react";
-import styles from "../components/layout.module.css";
-import Link from "next/link";
+import styles from "./layout.module.css";
 
 const Footer = () => {
   return (
