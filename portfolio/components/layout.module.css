@@ -32,6 +32,7 @@
   border-top: 1px solid #e6e6e6;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .footer img {
@@ -44,17 +45,4 @@
   align-items: center;
   text-decoration: none;
   color: inherit;
-}
-
-.footerSignUp {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin:1rem;
-}
-
-.footerInfo {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
 }
