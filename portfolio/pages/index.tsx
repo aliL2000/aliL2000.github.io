@@ -13,11 +13,7 @@ export default function Home() {
         <main>
           <h1 className={styles.title}>Ali Ladha</h1>
           <h1 className={styles.subtitle}>Dedicated and Detail-Oriented.</h1>
-          <h1 className={styles.subtitle}>I'm driven by curiosity and thrive on optimizing solutions.</h1>
-
-          <p className={styles.description}>
-            Get started by editing <code>pages/index.js</code>
-          </p>
+          <h1 className={styles.description}>I'm driven by curiosity and thrive on optimizing solutions.</h1>
         </main>
       </Layout>
 
