@@ -1,10 +1,9 @@
-import NavBar from './navbar';
+import React from 'react';
 import Footer from './footer';
  
 export default function Layout({ children }) {
   return (
     <>
-      <NavBar />
       <main>{children}</main>
       <Footer />
     </>
